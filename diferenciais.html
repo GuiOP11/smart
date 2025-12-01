@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8""")/>>
+<meta content="width=device-width, initial-scale=1.0" name="viewport""")/>>
 <title>Diferenciais Competitivos</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet""")/>>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet""")/>>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet""")/>>
 <style>
+/* Reset Universal para garantir consistência */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
 body {
-margin: 0;
-padding: 0;
-overflow: hidden;
 font-family: 'Open Sans', sans-serif;
 }
 .slide-container {
     width: 100%;
-    height: 100vh; /* ocupa 100% da tela do usuário */
+    min-height: 100vh; 
 }
 .title-font {
 font-family: 'Montserrat', sans-serif;
@@ -42,9 +44,22 @@ align-items: center;
 justify-content: center;
 font-size: 28px;
 color: white;
+/* Adiciona padding e garante o fundo em CSS puro, em vez de depender 100% do Tailwind inline */
+padding: 1rem; 
 }
+
+/* Define as cores de fundo específicas para cada feature-icon via CSS para simplificar o HTML */
+.feature-card.border-blue-500 .feature-icon { background-color: #3b82f6; }
+.feature-card.border-green-500 .feature-icon { background-color: #10b981; }
+.feature-card.border-purple-500 .feature-icon { background-color: #8b5cf6; }
+.feature-card.border-cyan-500 .feature-icon { background-color: #06b6d4; } /* Corrigido aqui */
+.feature-card.border-orange-500 .feature-icon { background-color: #f97316; }
+.feature-card.border-red-500 .feature-icon { background-color: #ef4444; }
+
+
 </style>
 </head>
+<body>
 <!-- NAVBAR FIXA -->
 <header class="fixed top-0 left-0 w-full bg-black bg-opacity-60 backdrop-blur-md text-white z-50">
     <nav class="max-w-6xl mx-auto flex items-center justify-between py-3 px-6">
@@ -63,10 +78,9 @@ color: white;
     </nav>
 </header>
 
-<!-- Ajuste para o conteúdo não ficar escondido -->
+<!-- Ajuste para o conteúdo não ficar escondido pela navbar fixa -->
 <div class="h-20"></div>
 
-<body>
 <div class="slide-container">
 <div class="w-full h-full p-8 flex flex-col">
 <!-- Header -->
@@ -79,7 +93,7 @@ color: white;
 <!-- Feature 1: 24/7 Monitoring -->
 <div class="feature-card border-l-4 border-blue-500">
 <div class="flex items-start space-x-4">
-<div class="feature-icon bg-blue-500">
+<div class="feature-icon">
 <i class="fas fa-heartbeat"></i>
 </div>
 <div class="flex-1">
@@ -91,7 +105,7 @@ color: white;
 <!-- Feature 2: Long Battery Life -->
 <div class="feature-card border-l-4 border-green-500">
 <div class="flex items-start space-x-4">
-<div class="feature-icon bg-green-500">
+<div class="feature-icon">
 <i class="fas fa-battery-full"></i>
 </div>
 <div class="flex-1">
@@ -103,7 +117,7 @@ color: white;
 <!-- Feature 3: Slim Design -->
 <div class="feature-card border-l-4 border-purple-500">
 <div class="flex items-start space-x-4">
-<div class="feature-icon bg-purple-500">
+<div class="feature-icon">
 <i class="fas fa-tshirt"></i>
 </div>
 <div class="flex-1">
@@ -114,20 +128,20 @@ color: white;
 </div>
 <!-- Feature 4: Water Resistance -->
 <div class="feature-card border-l-4 border-cyan-500">
-<div class="flex items-start space-x-4">
-<div class="feature-icon bg-cyan-500">
-<i class="fas fa-tint"></i>
-</div>
-<div class="flex-1">
-<h3 class="text-lg font-bold text-gray-800 mb-2 title-font">Resistência à Água</h3>
-<p class="text-sm text-gray-600 leading-relaxed">Certificação IP68. Resistente a até 50m de profundidade. Ideal para natação e atividades aquáticas.</p>
-</div>
-</div>
+    <div class="flex items-start space-x-4">
+        <div class="feature-icon">
+            <i class="fas fa-tint"></i>
+        </div>
+        <div class="flex-1">
+            <h3 class="text-lg font-bold text-gray-800 mb-2 title-font">Resistência à Água</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Certificação IP68. Resistente a até 50m de profundidade. Ideal para natação e atividades aquáticas.</p>
+        </div>
+    </div>
 </div>
 <!-- Feature 5: Compatibility -->
 <div class="feature-card border-l-4 border-orange-500">
 <div class="flex items-start space-x-4">
-<div class="feature-icon bg-orange-500">
+<div class="feature-icon">
 <i class="fas fa-mobile-alt"></i>
 </div>
 <div class="flex-1">
@@ -139,7 +153,7 @@ color: white;
 <!-- Feature 6: National Warranty -->
 <div class="feature-card border-l-4 border-red-500">
 <div class="flex items-start space-x-4">
-<div class="feature-icon bg-red-500">
+<div class="feature-icon">
 <i class="fas fa-shield-alt"></i>
 </div>
 <div class="flex-1">
