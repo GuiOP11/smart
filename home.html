@@ -2,23 +2,28 @@
 
 <html lang="pt-BR">
 <head>
-    <link rel="icon" href="index.html" type="image/x-icon"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" href="index.html" type="image/x-icon""")/>>
+<meta charset="utf-8""")/>>
+<meta content="width=device-width, initial-scale=1.0" name="viewport""")/>>
 <title>Por que vender Smartwatch? (5 razões)</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet""")/>>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet""")/>>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet""")/>>
 <style>
+/* Reset Universal para garantir consistência */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
 body {
-margin: 0;
-padding: 0;
-overflow: hidden;
+/* overflow: hidden; foi removido daqui para permitir a rolagem normal da página */
 font-family: 'Open Sans', sans-serif;
 }
 .slide-container {
     width: 100%;
-    height: 100vh; /* ocupa 100% da tela do usuário */
+    /* height: 100vh; Usar height pode cortar o footer se a tela for menor que 100vh. Melhor usar min-height para garantir que o conteúdo caiba. */
+    min-height: 100vh; 
 }
 
 .reason-card {
@@ -45,8 +50,18 @@ color: white;
 .title-font {
 font-family: 'Montserrat', sans-serif;
 }
+
+/* Define as cores de fundo específicas para cada icon-circle via CSS para simplificar o HTML */
+.reason-card.border-blue-500 .icon-circle { background-color: #3b82f6; }
+.reason-card.border-green-500 .icon-circle { background-color: #10b981; }
+.reason-card.border-purple-500 .icon-circle { background-color: #8b5cf6; }
+.reason-card.border-orange-500 .icon-circle { background-color: #f97316; } /* Corrigido aqui */
+.reason-card.border-red-500 .icon-circle { background-color: #ef4444; }
+
+
 </style>
 </head>
+<body>
 <!-- NAVBAR FIXA -->
 <header class="fixed top-0 left-0 w-full bg-black bg-opacity-60 backdrop-blur-md text-white z-50">
     <nav class="max-w-6xl mx-auto flex items-center justify-between py-3 px-6">
@@ -68,7 +83,6 @@ font-family: 'Montserrat', sans-serif;
 <!-- Ajuste para o conteúdo não ficar escondido -->
 <div class="h-20"></div>
 
-<body>
 <div class="slide-container">
 <div class="w-full h-full p-8 flex flex-col">
 <!-- Header -->
@@ -81,7 +95,7 @@ font-family: 'Montserrat', sans-serif;
 <!-- Reason 1: Market Growth -->
 <div class="reason-card border-blue-500">
 <div class="flex items-start space-x-4">
-<div class="icon-circle bg-blue-500">
+<div class="icon-circle">
 <i class="fas fa-chart-line"></i>
 </div>
 <div class="flex-1">
@@ -93,7 +107,7 @@ font-family: 'Montserrat', sans-serif;
 <!-- Reason 2: Profit Margin -->
 <div class="reason-card border-green-500">
 <div class="flex items-start space-x-4">
-<div class="icon-circle bg-green-500">
+<div class="icon-circle">
 <i class="fas fa-dollar-sign"></i>
 </div>
 <div class="flex-1">
@@ -105,7 +119,7 @@ font-family: 'Montserrat', sans-serif;
 <!-- Reason 3: Multiple Benefits -->
 <div class="reason-card border-purple-500">
 <div class="flex items-start space-x-4">
-<div class="icon-circle bg-purple-500">
+<div class="icon-circle">
 <i class="fas fa-heartbeat"></i>
 </div>
 <div class="flex-1">
@@ -117,8 +131,8 @@ font-family: 'Montserrat', sans-serif;
 <!-- Reason 4: Wide Audience -->
 <div class="reason-card border-orange-500">
 <div class="flex items-start space-x-4">
-<div class="icon-circle bg-orange-500">
-<i class="fas fa-users"></i>
+<div class="icon-circle">
+<i class="fas fa-globe"></i> <!-- Ícone alterado para fa-globe -->
 </div>
 <div class="flex-1">
 <h3 class="text-lg font-bold text-gray-800 mb-2 title-font">Público Amplo</h3>
@@ -129,7 +143,7 @@ font-family: 'Montserrat', sans-serif;
 <!-- Reason 5: Easy Logistics -->
 <div class="reason-card border-red-500">
 <div class="flex items-start space-x-4">
-<div class="icon-circle bg-red-500">
+<div class="icon-circle">
 <i class="fas fa-shipping-fast"></i>
 </div>
 <div class="flex-1">
